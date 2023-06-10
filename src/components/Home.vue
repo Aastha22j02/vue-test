@@ -1,3 +1,5 @@
+# single component create , methods, event
+
 <template>
   <div>
     <h1> Hello From home Component </h1>
