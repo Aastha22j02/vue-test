@@ -27,7 +27,7 @@ export default {
 };
 </script>
 
-# conditional , hide, show ,button 
+# data function, conditional , hide, show ,button 
 <template>
   <div>
     <h1 v-if="show" > Conditional Rendering in vue.js </h1>
