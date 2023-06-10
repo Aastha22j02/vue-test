@@ -27,3 +27,36 @@ export default {
 };
 </script>
 
+# conditional , hide, show ,button 
+<template>
+  <div>
+    <h1 v-if="show" > Conditional Rendering in vue.js </h1>
+    <!-- <h1 v-else > Conditional Rendering else block </h1> -->
+    <button v-on:click="display" >Toggle Element</button>
+  </div>
+  
+</template>
+
+<script>
+export default {
+    name:'aastha_demo',
+    props:{
+      data: String,
+      msg: String
+    },data()
+    {
+      return {show:true}
+    },
+    methods:{
+      display()
+      {
+        this.show=!this.show
+
+      }
+      
+    }
+    }
+
+</script>
+
+
