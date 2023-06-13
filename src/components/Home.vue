@@ -101,4 +101,47 @@ export default {
 
 </script>
 
+# template , ok properties, math equation 
+
+<template>
+  <div>
+    <h1>Template in vue.js</h1>
+    <!-- its a behave a constant -->
+    <h3 v-once> {{ name }}</h3> 
+    <h3> {{ name }}</h3>
+    <h3> {{ a + b }}</h3>
+    <h3> {{ ok?"Yes":"No" }}</h3>
+    <button v-on:click="updateText">Click me</button>
+
+  </div>
+</template>
+
+<script>
+export default {
+    name: "template-demo",
+    data()
+    {
+        return{
+            name: 'Aastha',
+            a:13,
+            b:345,
+            ok:true,
+        }
+    },
+    methods: {
+        updateText()
+        {
+            this.name="Peter"
+            this.ok=!this.ok
+        }
+        
+    }
+
+}
+</script>
+
+<style>
+
+</style>
+
 
