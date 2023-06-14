@@ -189,3 +189,84 @@ export default {
 
 </style>
 
+# style-binding 
+
+<template>
+    <h1>CSS binding</h1>
+    <h2 class="staticClass" :class="adjustStyle">Home Component</h2>
+    <button v-on:click="colorfull=!colorfull">Apply Style</button>
+    </template>
+    
+    <script>
+    export default {
+        name: "Home-bind",
+        data() {
+            return {
+                colorfull: false
+            }
+        },
+        computed: {
+            adjustStyle() {
+                return {
+                    green: this.colorfull,
+                    err: true,
+                    other: false
+                }
+            }
+        }
+    }
+    </script>
+    
+    <style scoped>
+    h1 {
+        color: orange
+    }
+    
+    .green {
+        background-color: green;
+        width: 200px;
+        padding: 10px;
+        color: #fff
+    }
+    
+    .err {
+        color: red
+    }
+    
+    .other {
+        font-size: 70px
+    }
+    </style>
+
+#atyle binding with object
+
+<template>
+    <div>
+      <h1 class="homestyle"> Class and style bindings</h1>
+      <h1 v-bind:style="{color:'blue'}"> Style Bindings </h1>
+      <h1 v-bind:class="{display:show}"> Class  Bindings with object </h1>
+  
+    </div>
+  </template>
+  
+  <script>
+  export default {
+      name: "style-binding",
+      data(){
+          return {                
+              show:false
+          }
+      }
+  
+  }; 
+  </script >
+  
+  <style  scoped>
+  .homestyle{
+      color:orange
+  }
+  .display{
+      background-color: brown;
+  }
+  
+  </style>
